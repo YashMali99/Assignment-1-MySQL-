@@ -1,0 +1,43 @@
+Q.1 Count the number of Salesperson whose name begin with ‘a’/’A’.
+
+Query-
+
+select Count(snum) from SalesPeople
+where sname like 'a/A%';
+
+
+
+Q.2 Display all the Salesperson whose all orders worth is more than Rs. 2000.
+
+Query-
+
+select * from SalesPeople 
+where Amt >= 2000;
+
+
+
+Q.3 Count the number of Salesperson belonging to Newyork.
+
+Query-
+
+select count(sname) from SalesPeople
+where City = 'Newyork';
+
+
+
+Q.4 Display the number of Salespeople belonging to London and belonging to Paris.
+
+Query-
+
+select count(snum), sname from SalesPeople
+where city = 'London' or city = 'paris';
+
+
+
+Q.5 Display the number of orders taken by each Salesperson and their date of orders.
+
+Query -
+
+select sname,count(Onum),Odate 
+from SalesPeople
+group by snum;
